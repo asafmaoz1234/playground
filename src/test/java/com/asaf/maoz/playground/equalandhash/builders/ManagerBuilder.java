@@ -1,4 +1,7 @@
-package com.asaf.maoz.playground.equalandhash;
+package com.asaf.maoz.playground.equalandhash.builders;
+
+import com.asaf.maoz.playground.equalandhash.Employee;
+import com.asaf.maoz.playground.equalandhash.Manager;
 
 import java.util.Set;
 

@@ -1,5 +1,7 @@
 package com.asaf.maoz.playground.equalandhash;
 
+import com.asaf.maoz.playground.equalandhash.builders.EmployeeBuilder;
+import com.asaf.maoz.playground.equalandhash.builders.ManagerBuilder;
 import org.junit.Before;
 import org.junit.Test;
 

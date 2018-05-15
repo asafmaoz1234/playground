@@ -1,4 +1,6 @@
-package com.asaf.maoz.playground.equalandhash;
+package com.asaf.maoz.playground.equalandhash.builders;
+
+import com.asaf.maoz.playground.equalandhash.Employee;
 
 public class EmployeeBuilder {
 
