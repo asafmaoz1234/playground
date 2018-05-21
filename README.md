@@ -15,6 +15,12 @@ Mini Projects:
 
 	Created a simple checked and un checked exception to show usage differences.
 	
+- Testing with Mockito and Spring Boot (autowirefromtestmockito package)
+
+    A test class testing a sample user class using autowire and mocks.
+
+    Mockito and spring Boot
+
 - Git aliases
 
       cm = commit -m
