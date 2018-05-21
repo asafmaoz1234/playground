@@ -32,7 +32,6 @@ public class UserDAO {
     @JsonIgnoreProperties
     private Date updatedAt;
 
-
     public Long getId() {
         return id;
     }
