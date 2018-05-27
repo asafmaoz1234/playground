@@ -4,6 +4,9 @@ A Java project, initialized with Spring and Maven
 
 Made for small side projects and testing...
 
+The project can run in 3 different environments with different spring profiles
+dev (default),test and prod(credentials as env parameters). 
+
 Mini Projects:
 
 - HashCodeAndEquals (equalandhash package)
