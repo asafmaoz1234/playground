@@ -62,3 +62,4 @@ Mini Projects:
     	
     	pushfo = "!f() { BR_NAME=$(git rev-parse --abbrev-ref HEAD); git push -f origin $BR_NAME; }; f"
     	
+    	git config --global alias.cm 'commit -m' && git config --global alias.cb 'checkout -b' && git config --global alias.st status && git config --global alias.br branch && git config --global alias.ms 'merge --squash' && git config --global alias.ch checkout && git config --global alias.cam 'commit -a -m' && git config --global alias.clist 'config --list' && git config --global alias.ap 'add -p' && git config --global alias.ds 'diff --staged' && git config --global alias.cmamne 'commit --amend --no-edit'
