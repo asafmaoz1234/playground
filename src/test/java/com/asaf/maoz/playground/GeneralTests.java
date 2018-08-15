@@ -50,5 +50,35 @@ public class GeneralTests {
         assertThat(list, is(equalTo(Collections.emptyList())));
     }
 
+    @Test
+    public void stringBufferSubString() {
+        int maxLength = 400;
+        StringBuilder downloadFailure = new StringBuilder();
+        downloadFailure.append("Another difference between them is that, If both \"==\" and equals() is used to compare objects than == returns true only if both references points to same object while equals() can return true or false based on its overridden implementation.One of the popular cases is comparing two String in Java in which case == and ");
 
+        String reasonFromFunc = this.extractReason(downloadFailure, maxLength);
+        String reasonFromWTF = downloadFailure != null ? (downloadFailure.substring(0, downloadFailure.length() > maxLength ? maxLength : downloadFailure.length())) : "";
+        assertThat(reasonFromFunc, is(equalTo(reasonFromWTF)));
+
+        maxLength = 20;
+        reasonFromFunc = this.extractReason(downloadFailure, maxLength);
+        reasonFromWTF = downloadFailure != null ? (downloadFailure.substring(0, downloadFailure.length() > maxLength ? maxLength : downloadFailure.length())) : "";
+        assertThat(reasonFromFunc, is(equalTo(reasonFromWTF)));
+        System.out.println(reasonFromFunc);
+
+    }
+
+    private String extractReason(StringBuilder downloadFailure, int maxLength) {
+        String reason;
+        if (downloadFailure == null) {
+            return "";
+        }
+
+        int endLocationOfReason = maxLength;
+        if(downloadFailure.length() < maxLength) {
+            endLocationOfReason = downloadFailure.length();
+        }
+        reason = downloadFailure.substring(0, endLocationOfReason);
+        return reason;
+    }
 }
