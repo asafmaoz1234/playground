@@ -7,6 +7,8 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
+//Created a simple checked and un checked exception to show usage differences.
+
 public class CheckedUnCheckedTest {
 
     private String errorMessage;
