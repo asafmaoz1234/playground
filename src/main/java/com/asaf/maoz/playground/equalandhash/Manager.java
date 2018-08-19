@@ -30,4 +30,24 @@ public class Manager {
     public void setEmployees(Set<Employee> employees) {
         this.employees = employees;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Manager manager = (Manager) o;
+
+        if (id != manager.id) return false;
+        if (name != null ? !name.equals(manager.name) : manager.name != null) return false;
+        return employees != null ? employees.equals(manager.employees) : manager.employees == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + (employees != null ? employees.hashCode() : 0);
+        return result;
+    }
 }

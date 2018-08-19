@@ -53,8 +53,7 @@ public class EqualAndHashTest {
     }
 
     /**
-     * the copy instance changed value
-     * but its still marked equal!
+     * the copy instance changed value for both instances
      */
     @Test
     public void copyInstanceChangeId_Equals(){
@@ -91,4 +90,18 @@ public class EqualAndHashTest {
         assertTrue(this.manager.equals(sampleManager));
         assertTrue(this.manager.hashCode() == sampleManager.hashCode());
     }
+
+    @Test
+    public void diffInstancesSameValues_EqualsButDiffInOperator(){
+        Manager sampleManager = new ManagerBuilder()
+                .withId(DEF_MANAGER_ID)
+                .withName(DEF_MANAGER_NAME)
+                .withEmployees(this.employeeSet)
+                .build();
+
+        assertFalse(this.manager == sampleManager);
+        assertTrue(this.manager.equals(sampleManager));
+        assertTrue(this.manager.hashCode() == sampleManager.hashCode());
+    }
+
 }
